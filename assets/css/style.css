@@ -1109,7 +1109,7 @@ form .button-area {
 .skills-description h3 {
   font-size: 2em;
   margin-bottom: 3px;
-  margin-left: 50px;
+  margin-left: 60px;
 }
 
 .skills-info {
@@ -1143,6 +1143,7 @@ form .button-area {
 }
 .skills-card img {
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 .skills-card h3 {
   text-align: center;
