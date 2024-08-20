@@ -1137,7 +1137,7 @@ form .button-area {
 .skills-description h3 {
   font-size: 2em;
   margin-bottom: 3px;
-  margin-left: 60%;
+  margin-left: 50px;
 }
 
 .skills-info {
@@ -1193,6 +1193,17 @@ form .button-area {
   gap: 20px;
   margin-bottom: 20px;
   /* flex-grow: inherit; */
+
+  justify-content: space-between;
+  
+}
+.skills-container1{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 20px;
+  /* flex-grow: inherit; */
+
   
 }
 /* ==========project============ */
