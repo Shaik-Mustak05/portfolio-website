@@ -434,6 +434,36 @@ header .navbar ul li a:hover {
 .resumebtn .btn:hover i {
   transform: translateX(5px);
 }
+/* hire btn*/
+.hirebtn {
+  margin-top: 4rem;
+  display: flex;
+}
+.hirebtn .btn {
+  padding: 1.5rem 2rem;
+  border-radius: 0.5em;
+  transition: 0.3s;
+  color: #fff;
+  background: #2506ad;
+  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  font-family: "Nunito", sans-serif;
+}
+.hirebtn .btn span {
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+.hirebtn .btn i {
+  margin-left: 0.3rem;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+.hirebtn .btn:hover {
+  background: #1a047e;
+}
+.hirebtn .btn:hover i {
+  transform: translateX(5px);
+}
 /* about media queries starts*/
 @media screen and (max-width: 600px) {
   .about .row .image {
@@ -639,25 +669,25 @@ header .navbar ul li a:hover {
 /* education media queries ends*/
 /* education section ends */
 
-/* work section starts */
-.work {
+/* projects section starts */
+.projects {
   /* background: #010124; */
   background: linear-gradient(to bottom, #000031, #00002c);
 }
-.work h2 {
+.projects h2 {
   color: #fff;
   padding: 1rem;
 }
-.work .heading span {
+.projects .heading span {
   color: rgb(255, 230, 0);
 }
-.work .box-container {
+.projects .box-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   margin: 2rem;
 }
-.work .box-container .box {
+.projects .box-container .box {
   flex: 1 1 30rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -665,99 +695,80 @@ header .navbar ul li a:hover {
   overflow: hidden;
   height: 30rem;
 }
-.work .box-container .box img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+project-card h3{
+  color: white;
 }
-.work .box-container .box .content {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 85%;
-  left: 0;
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  flex-direction: column;
+.project-card p{
+  color: white;
 }
-.work .box-container .box .content .tag {
+.project-card {
+  width: 340px;
+  border: 1px solid lightgray;
+  border-radius: 14px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  border: 1px solid var(--hover-color);
+  cursor: pointer;
+}
+
+.project-card-img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 5px;
+}
+
+.projects-container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
   justify-content: space-between;
-  align-items: center;
-  height: 4.5rem;
-  width: 100%;
-  padding-left: 1rem;
-  background: #ffd900;
 }
-.work .box-container .box .content .tag h3 {
-  font-size: 2rem;
-}
-.work .box-container .box:hover .content {
-  top: 25%;
-}
-.work .desc {
-  margin: 2rem;
+
+/* Button styling */
+.project-card-buttons {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-top: 5px; /* Space above the buttons */
+  margin-bottom: 5px;
 }
-.work .desc p {
-  font-size: 1.5rem;
-}
-.work .desc .btns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem;
-}
-.work .desc .btns .btn {
-  line-height: 0;
-  display: inline;
-  padding: 1.5rem 2.5rem;
-  border-radius: 0.5rem;
-  font-size: 1.5rem;
-  color: #fff;
-  background: rgb(12, 12, 12);
-  margin-right: 2rem;
-}
-.work .desc .btns .btn:hover {
-  background: #310ae0f5;
-}
-.work .viewall {
-  display: flex;
-  justify-content: center;
-}
-.work .viewall .btn {
-  position: relative;
-  line-height: 0;
-  padding: 1.6rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.5s;
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-  border: 2px solid #fff;
-  box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
+
+.project-card-buttons .btn {
+  flex: 1; /* Allows buttons to expand to equal width */
   text-align: center;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
-.work .viewall .btn span {
-  font-weight: 600;
-  font-size: 1.7rem;
-  font-family: "Nunito", sans-serif;
+
+.project-card-buttons .btn.live {
+  background-color: #28a745; /* Green for Live */
 }
-.work .viewall .btn i {
-  margin-left: 0.3rem;
-  font-size: 1.5rem;
-  transition: 0.3s;
+
+.project-card-buttons .btn.github {
+  background-color: #333; /* Dark color for GitHub */
 }
-.work .viewall .btn:hover {
-  background: #fff;
-  color: #000;
+
+.project-card-buttons .btn:hover {
+  opacity: 0.8; /* Slightly fade on hover */
 }
-.work .viewall .btn:hover i {
-  transform: translateX(5px);
+
+.project-card-buttons .btn.live:hover {
+  background-color: #218838; /* Darker green on hover */
 }
-/* work section ends */
+.project-card-buttons .btn.github:hover {
+  background-color: #111; /* Darker shade on hover */
+}
+/* projects section ends */
 
 /* view all button */
 .morebtn {
@@ -792,46 +803,7 @@ header .navbar ul li a:hover {
   transform: translateX(5px);
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  .experience {
-    min-height: 80vh;
-  }
-  .experience .timeline {
-    margin-top: 2rem;
-  }
-  .experience .timeline::after {
-    left: 31px;
-  }
-  .experience .container {
-    width: 100%;
-    padding-left: 8rem;
-    padding-right: 2rem;
-  }
-  .experience .container::after {
-    font-size: 2.2rem;
-  }
-  .experience .container::before {
-    left: 61px;
-    border: medium solid #f68c09;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #f68c09 transparent transparent;
-  }
-  .experience .left::after {
-    left: 15px;
-  }
-  .experience .right::after {
-    left: 15px;
-  }
-  .experience .right {
-    left: 0%;
-  }
-  .morebtn {
-    margin-top: 3rem;
-  }
-}
-/* experience media queries ends */
-/* experience section ends */
+
 
 /* contact section starts */
 .contact {
@@ -1206,78 +1178,5 @@ form .button-area {
 
   
 }
-/* ==========project============ */
-/* Project Card styling */
-.project-card h3{
-  color: white;
-}
-.project-card p{
-  color: white;
-}
-.project-card {
-  width: 340px;
-  border: 1px solid lightgray;
-  border-radius: 14px;
-  padding: 10px;
-  transition: box-shadow 0.3s ease;
-}
 
-.project-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
-  border: 1px solid var(--hover-color);
-  cursor: pointer;
-}
-
-.project-card-img {
-  width: 100%;
-  border-radius: 14px;
-  margin-bottom: 5px;
-}
-
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 20px;
-  justify-content: space-between;
-}
-
-/* Button styling */
-.project-card-buttons {
-  display: flex;
-  gap: 10px; /* Space between buttons */
-  margin-top: 5px; /* Space above the buttons */
-  margin-bottom: 5px;
-}
-
-.project-card-buttons .btn {
-  flex: 1; /* Allows buttons to expand to equal width */
-  text-align: center;
-  padding: 8px;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.project-card-buttons .btn.live {
-  background-color: #28a745; /* Green for Live */
-}
-
-.project-card-buttons .btn.github {
-  background-color: #333; /* Dark color for GitHub */
-}
-
-.project-card-buttons .btn:hover {
-  opacity: 0.8; /* Slightly fade on hover */
-}
-
-.project-card-buttons .btn.live:hover {
-  background-color: #218838; /* Darker green on hover */
-}
-.project-card-buttons .btn.github:hover {
-  background-color: #111; /* Darker shade on hover */
-}
+.
