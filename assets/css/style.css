@@ -695,7 +695,7 @@ header .navbar ul li a:hover {
   overflow: hidden;
   height: 30rem;
 }
-project-card h3{
+.project-card h3{
   color: white;
 }
 .project-card p{
