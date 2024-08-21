@@ -1170,7 +1170,7 @@ form .button-area {
   margin-bottom: 20px;
   /* flex-grow: inherit; */
 
-  justify-content: space-between;
+  justify-content: space-evenly;
   
 }
 .skills-container1{
